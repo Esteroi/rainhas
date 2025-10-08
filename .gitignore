@@ -1,3 +1,28 @@
+<<<<<<< HEAD
 .wwebjs_auth/ 
 node_modules/ 
 .env 
+=======
+# Node modules
+node_modules/
+
+# Pasta de autenticação do WhatsApp
+.wwebjs_auth/
+
+# Arquivos de log
+*.log
+chrome_debug.log
+
+# Arquivos de dados locais
+dados_jogos.json
+participantes.json
+participantes_formatados.txt
+desafiolista.txt
+
+# Arquivos de ambiente
+.env
+💡 Isso significa que essas pastas e arquivos não serão enviados para o GitHub.
+
+token.txt 
+token.txt 
+>>>>>>> 3312338f92c6eeaadad4b9e9a97a95dd8678e452

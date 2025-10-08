@@ -7,7 +7,13 @@ Aqui nós temos:
 * ⁠Plataformas pagantes e abençoadas
 * ⁠Lista de horários e links de porcentagem
 * ⁠Posts de ganhos 
+<<<<<<< HEAD
 * MUITA PARTICIPAÇÃO E INTERAÇÃO
+=======
+
+*O QUE ESPERAMOS DE VOCE?*
+* MUITA PARTICIPAÇÃO E INTERAÇÃO*
+>>>>>>> 3312338f92c6eeaadad4b9e9a97a95dd8678e452
 
 Qualquer coisa estamos à disposição!
 

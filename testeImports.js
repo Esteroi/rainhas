@@ -1,0 +1,15 @@
+require('./util/motivacional');
+require('./util/bemvindos');
+require('./util/contatosAdms');
+require('./util/piada');
+require('./util/versiculos');
+require('./util/ajuda');
+require('./util/dicas');
+require('./util/minutosPagantes');
+require('./util/brincadeiras');
+require('./util/sorte');
+require('./util/porcentagem');
+require('./util/saudacoes');
+require('./util/promocoes');
+require('./util/plataformas');
+console.log("Todos os arquivos importaram corretamente!");
