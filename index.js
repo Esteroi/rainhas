@@ -35,6 +35,7 @@ let candidatoAcao = null;
 iniciarWatchParticipantes();
 
 // -------------------- FUNÇÕES AUXILIARES --------------------
+
 async function carregarDadosJogos() {
   try {
     const rawData = await fsp.readFile(dadosJogosPath, "utf8");
@@ -87,6 +88,7 @@ async function enviarHorariosJogos(chat, horarioAlvo, horarioAtual) {
 }
 
 // -------------------- FUNÇÕES DE ENVIO AUTOMÁTICO --------------------
+
 function iniciarVerificacaoAutomatica(client) {
   let ultimaHoraEnviadaPlataformas = null;
   const horariosEnviados = new Set();
@@ -160,6 +162,7 @@ function iniciarEnvioAutomaticoDicas(client) {
 }
 
 // -------------------- FUNÇÃO DE TRATAMENTO DE MENSAGENS --------------------
+
 async function tratarMensagem(client, message) {
   const chat = await message.getChat();
   if (!message.body || typeof message.body !== "string") return;
@@ -168,37 +171,53 @@ async function tratarMensagem(client, message) {
 
   console.log("Mensagem recebida:", corpo);
 
-  function isAdmin() {
+  // Função para verificar se o autor é admin
+    function isAdmin() {
+    // se não for grupo, não é admin de grupo
     if (!chat.isGroup) return false;
+
+    // id confiável do autor: preferimos o contact (sempre disponível)
     const autorId = (contact && contact.id && contact.id._serialized)
       ? contact.id._serialized
       : (message.author || message.from);
+
+    // lista de admins do grupo (serializados)
     const adminIds = chat.participants
       .filter(p => p.isAdmin)
       .map(p => p.id._serialized);
+
+   
     return adminIds.includes(autorId);
   }
-
+ 
   // -------------------- COMANDO !EXPULSAR --------------------
-  if (corpo.startsWith('!expulsar')) {
+    if (corpo.startsWith('!expulsar')) {
     if (!chat.isGroup) return;
+
     if (!isAdmin()) {
       await chat.sendMessage('❌ Apenas administradores podem usar este comando.');
       return;
     }
+
     const mentionedIds = message.mentionedIds;
     if (!mentionedIds || mentionedIds.length === 0) {
       await chat.sendMessage('⚠️ Por favor, mencione um usuário para expulsar.');
       return;
     }
+
+    // Pega a lista de admins do grupo
     const adminIds = chat.participants
       .filter(p => p.isAdmin)
       .map(p => p.id._serialized);
+
+    // Filtra apenas usuários mencionados que NÃO são admins
     const expulsar = mentionedIds.filter(id => !adminIds.includes(id));
+
     if (expulsar.length === 0) {
       await chat.sendMessage('⚠️ Todos os usuários mencionados são administradores. O bot não pode expulsá-los.');
       return;
     }
+
     try {
       await chat.removeParticipants(expulsar);
       await chat.sendMessage('🚷 Usuário(s) expulso(s) com sucesso.');
@@ -209,31 +228,94 @@ async function tratarMensagem(client, message) {
     return;
   }
 
-  // -------------------- COMANDO !MARCARTODOS --------------------
-  if (corpo.startsWith("!marcartodos")) {
-    const textoOriginal = message.body.slice("!marcartodos".length).trim();
-    const mensagemFormatada = textoOriginal.length > 0 ? textoOriginal : "📣 *Mensagem para todos.*";
 
-    try {
-      const mentions = chat.participants.map(p => p.id._serialized);
-      let media = null;
-      if (message.hasMedia) media = await message.downloadMedia();
-
-      try { await message.delete(true); } catch {}
-      if (media) {
-        await chat.sendMessage(media, { caption: mensagemFormatada, mentions: mentions.map(id => ({ id })) });
-      } else {
-        await chat.sendMessage(mensagemFormatada, { mentions: mentions.map(id => ({ id })) });
-      }
-
-    } catch (err) {
-      console.error("❌ Erro ao reenviar mensagem com menções:", err);
-      await chat.sendMessage("⚠️ Não foi possível reenviar a mensagem para todos.");
+  // -------------------- COMANDO !PERGUNTA --------------------
+  if (corpo === '!pergunta') {
+    if (!chat.isGroup) return;
+    if (!isAdmin()) {
+      await chat.sendMessage('❌ Apenas administradores podem usar este comando.');
+      return;
+    }
+    if (!perguntaAtual || respondida) {
+      const pergunta = brincadeiras[Math.floor(Math.random() * brincadeiras.length)];
+      perguntaAtual = pergunta;
+      respondida = false;
+      candidatoAcao = null;
+      await chat.sendMessage(`🧠 Pergunta:\n\n${pergunta.pergunta}`);
+    } else {
+      await chat.sendMessage('⚠️ Já há uma pergunta ativa no momento.');
     }
     return;
   }
 
-  // -------------------- OUTROS COMANDOS --------------------
+  // -------------------- COMANDO !PARABENIZAR --------------------
+  if (corpo.startsWith('!parabenizar')) {
+    if (!chat.isGroup) return;
+    if (!isAdmin()) {
+      await chat.sendMessage('❌ Apenas administradores podem usar este comando.');
+      return;
+    }
+
+    const mencionados = message.mentionedIds;
+    if (!mencionados || mencionados.length === 0) {
+      await chat.sendMessage('⚠️ Use: !parabenizar @usuario');
+      return;
+    }
+
+    for (const userId of mencionados) {
+      const contato = await client.getContactById(userId);
+      await chat.sendMessage(
+        `🎉 Parabéns, @${contato.id.user}! Procure a adm Ester ou a adm Kely para pegar sua banca! Lembrando: quem jogou nas nossas plataformas hoje ganha 15, esta semana 10.`,
+        { mentions: [contato] }
+      );
+    }
+
+    respondida = true;
+    perguntaAtual = null;
+    return;
+  }
+
+  //-------------------- VERIFICAÇÃO DE LINKS --------------------
+
+if (chat.isGroup && message.body && message.body.match(/https?:\/\/\S+/i)) {
+  if (message.fromMe) return;
+
+  let autor = message.author || message.from;
+
+  // Normaliza IDs @lid -> @c.us
+  if (autor.includes('@lid')) {
+    autor = autor.replace('@lid', '@c.us');
+  }
+
+  const adminIds = chat.participants
+    .filter(p => p.isAdmin)
+    .map(p => p.id._serialized);
+
+  if (!adminIds.includes(autor)) {
+    try {
+      const participante = chat.participants.find(p => p.id._serialized === autor);
+
+      if (!participante) {
+        console.log(`⚠️ Usuário ${autor} não está na lista de participantes. Não foi possível expulsar.`);
+        return;
+      }
+
+      await message.delete(true);
+      await chat.removeParticipants([autor]);
+
+      console.log(`🚫 Link enviado por não admin (${autor}) - removido.`);
+      await chat.sendMessage('❌ Link não autorizado! Membro removido.');
+    } catch (err) {
+      console.error("Erro ao remover membro:", err);
+      await chat.sendMessage("⚠️ Não foi possível remover o membro. O bot precisa ser admin.");
+    }
+  } else {
+    console.log(`🔑 Link enviado por admin (${autor}) - permitido.`);
+  }
+  return;
+}
+
+// -------------------- OUTROS COMANDOS --------------------
   if (corpo === "!dica") {
     const textoFixo = "👑 *Dica da RAINHA DA SORTE* 👑\nAnote e use com sabedoria:";
     const mensagemCompleta = `${textoFixo}\n\n${obterDicaAleatoria()}\n\n${mensagemPlataformasParaDicas()}`;
@@ -267,15 +349,19 @@ async function tratarMensagem(client, message) {
     case "!links":
       await chat.sendMessage(linksPorcentagem);
       return;
+
     case "!sorte":
       await message.reply(gerarSorteUnica());
       return;
+
     case "!plataformas":
       await chat.sendMessage(mensagemPlataformas());
       return;
+
     case "!promo":
       await chat.sendMessage(mensagemPromocoes());
       return;
+
     case "!participantes":
       try {
         const conteudo = await fsp.readFile(participantesFormatadosPath, "utf8");
@@ -286,6 +372,7 @@ async function tratarMensagem(client, message) {
         await chat.sendMessage("⚠️ Erro ao carregar a lista de participantes.");
       }
       return;
+
     case "!sortear2":
       const participantes = await carregarParticipantes();
       if (participantes.length < 2) {
@@ -310,14 +397,17 @@ async function tratarMensagem(client, message) {
       await chat.sendMessage("⚠️ Formato inválido. Use: !desafio NomeDoDesafio Valor\nEx: !desafio Mega Sorteio R$ 50,00");
       return;
     }
+
     const valorRaw = partes.pop();
     const nomeDesafio = partes.slice(1).join(" ");
     const valorLimpo = valorRaw.replace("R$", "").replace(",", ".").trim();
     const valor = parseFloat(valorLimpo);
+
     if (isNaN(valor)) {
       await chat.sendMessage("⚠️ Valor inválido. Use um valor monetário. Ex: R$ 50,00");
       return;
     }
+
     const valorFormatado = `R$ ${valor.toFixed(2).replace(".", ",")}`;
     const data = new Date();
     const linhaLista = `Nome: ${nomeDesafio} - Valor: ${valorFormatado} - Criado em: ${data.toISOString()}\n`;
@@ -356,9 +446,22 @@ async function tratarMensagem(client, message) {
     await enviarHorariosJogos(chat, horario, horaAtual);
     return;
   }
-} // <-- FECHA a função tratarMensagem
 
+  if (corpo.startsWith("!marcartodos")) {
+    const textoOriginal = message.body.slice("!marcartodos".length).trim();
+    const mensagemFormatada = textoOriginal.length > 0 ? textoOriginal : "📣 *Mensagem para todos.*";
 
+    try {
+      const mentions = chat.participants.map(p => p.id._serialized);
+      await message.delete(true);
+      await chat.sendMessage(mensagemFormatada, { mentions: mentions });
+    } catch (err) {
+      console.error("Erro ao marcar todos:", err);
+      await chat.sendMessage("❌ Não foi possível marcar todos os membros.");
+    }
+    return;
+  }
+}
 
 // -------------------- INICIALIZAÇÃO DO CLIENTE --------------------
 
