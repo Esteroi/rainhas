@@ -359,56 +359,55 @@ async function tratarMensagem(client, message) {
 } // <-- FECHA a função tratarMensagem
 
 
-// -------------------- FUNÇÃO PARA INICIAR O BOT --------------------
 
-    const client = new Client({
-        authStrategy: new LocalAuth(),
-        puppeteer: { headless: true }
-    });
+// -------------------- INICIALIZAÇÃO DO CLIENTE --------------------
 
-    // QR Code
-    client.on('qr', (qr) => {
-        qrcode.generate(qr, { small: true });
-        console.log("📲 Escaneie o QR Code para conectar.");
-    });
+async function iniciar() {
+  await carregarDadosJogos();
 
-    // Bot pronto
-    client.on('ready', async () => {
-        console.log("✅ Bot WhatsApp pronto!");
-        await carregarDadosJogos();
 
-        iniciarVerificacaoAutomatica(client);
-        iniciarEnvioAutomaticoDicas(client);
-    });
+const client = new Client({
+  authStrategy: new LocalAuth(),
+  puppeteer: {
+    executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  }
+});
 
-    // Recebimento de mensagens
-    client.on("message", async (message) => {
-        try {
-            await tratarMensagem(client, message);
-        } catch (err) {
-            console.error("Erro no tratamento da mensagem:", err);
-        }
-    });
+  client.on("qr", (qr) => {
+    qrcode.generate(qr, { small: true });
+    console.log("📲 Escaneie o QR Code para conectar.");
+  });
 
-    // Boas-vindas
-    client.on('group_join', async (notification) => {
-        try {
-            const chat = await notification.getChat();
-            const contact = await notification.getContact();
-            const nomeUsuario = contact.pushname || contact.number || "novo membro";
+  client.on("ready", () => {
+    console.log("✅ Cliente está pronto!");
+    iniciarVerificacaoAutomatica(client);
+    iniciarEnvioAutomaticoDicas(client);
+  });
 
-            const mensagem = mensagemBoasVindas(nomeUsuario, chat.name);
+  client.on("message", async (message) => {
+    try {
+      await tratarMensagem(client, message);
+    } catch (err) {
+      console.error("Erro no tratamento da mensagem:", err);
+    }
+  });
 
-            await chat.sendMessage(mensagem, { mentions: [contact] });
-            console.log(`👑 Mensagem de boas-vindas enviada para ${nomeUsuario}`);
-        } catch (err) {
-            console.error("❌ Erro ao enviar mensagem de boas-vindas:", err);
-        }
-    });
+ // 📌 AQUI entra o evento de boas-vindas
+  client.on('group_join', async (notification) => {
+    try {
+      const chat = await notification.getChat();
+      const contact = await notification.getContact();
+      const nomeUsuario = contact.pushname || contact.number || "novo membro";
 
-    // Inicializa o client
-    await client.initialize();
+      const mensagem = mensagemBoasVindas(nomeUsuario, chat.name);
+
+      await chat.sendMessage(mensagem, { mentions: [contact] });
+      console.log(`👑 Mensagem de boas-vindas enviada para ${nomeUsuario}`);
+    } catch (err) {
+      console.error("❌ Erro ao enviar mensagem de boas-vindas:", err);
+    }
+  });
+
+  await client.initialize();
 }
-
-// -------------------- CHAMA O BOT --------------------
-iniciarBot();
+iniciar();
