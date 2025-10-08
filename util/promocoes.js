@@ -12,11 +12,14 @@ function mensagemPromocoes() {
 
 *DEVOLVO 5 NO PIX_*
 
-🔗https://tycorvo.com?a=896646216
+✅**CLUBE 777 ASIA*
+🔗https://777asian.cc/?id=181355692
 
-*OUUUUU
+✅**COROA JJZZ*
+🔗https://www.jjzzjogo.com/?id=741444131
 
-🔗https://thorpg.net/?id=282682579
+✅**MANGA CUPCAKE*
+🔗https://manga-cupcake-pg/?id=672769741
 
 *POUCAS VAGAS*
 
