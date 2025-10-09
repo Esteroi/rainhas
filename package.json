@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-
     "@wppconnect-team/wppconnect": "^1.37.4",
     "axios": "^1.11.0",
     "cheerio": "^1.1.2",
@@ -24,3 +23,4 @@
   "devDependencies": {},
   "description": ""
 }
+
