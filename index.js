@@ -513,8 +513,6 @@ const client = new Client({
 
   await client.initialize();
 }
-<<<<<<< HEAD
+
 iniciar();
-=======
-iniciar();
->>>>>>> 3312338f92c6eeaadad4b9e9a97a95dd8678e452
+
