@@ -15,7 +15,7 @@ function mensagemPromocoes() {
 🔹COROA: https://www.jjzzjogo.com/?id=741444131
 🔹MANGA: https://manga-cupcake-pg/?id=672769741
 🔹MK: https://wwww.slotsmk.bet/?id=567149395
-🔹OKOK: https://wwww.okokcoco.win/?id=366139391
+🔹OKOK: https://www.okokcoco.win/?id=366139391
 
 *POUCAS VAGAS*
 
