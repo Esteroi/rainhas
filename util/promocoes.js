@@ -11,14 +11,11 @@ function mensagemPromocoes() {
 
 *DEVOLVO 5 NO PIX_*
 
-✅**CLUBE 777 ASIA*
-🔗https://777asian.cc/?id=181355692
-
-✅**COROA JJZZ*
-🔗https://www.jjzzjogo.com/?id=741444131
-
-✅**MANGA CUPCAKE*
-🔗https://manga-cupcake-pg/?id=672769741
+🔹CLUBE 777: https://777asian.cc/?id=181355692
+🔹COROA: https://www.jjzzjogo.com/?id=741444131
+🔹MANGA: https://manga-cupcake-pg/?id=672769741
+🔹MK: https://wwww.slotsmk.bet/?id=567149395
+🔹OKOK: https://wwww.okokcoco.win/?id=366139391
 
 *POUCAS VAGAS*
 
