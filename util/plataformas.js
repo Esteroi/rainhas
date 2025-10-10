@@ -5,16 +5,19 @@ function mensagemPlataformas() {
 🎯 *PLATAFORMAS INDICADAS* 🎯
 
 ✅ **MANGA CUPCAKE**
-🔗 https://manga-Cupcake-pg.com/?id=672769741
+🔗https://manga-Cupcake-pg.com/?id=672769741
 
 ✅ **COROA JJZZ**
-🔗 https://www.jjzzjogo.com/?id=741444131
+🔗https://www.jjzzjogo.com/?id=741444131
 
 ✅ **MK SLOTS**
-🔗 https://wwww.slotsmk.bet/?id=567149395
+🔗https://wwww.slotsmk.bet/?id=567149395
 
 ✅ **OKOK COCO**
-🔗 https://www.okokcoco.win/?id=366139391
+🔗https://www.okokcoco.win/?id=366139391
+
+✅ **TY FALCON*
+🔗https://tyfalcon.com?a=678842351
 
 ⚠️ *Atenção:* ⚠️
 Sempre invista com cautela e responsabilidade.  
@@ -29,6 +32,7 @@ function mensagemPlataformasParaDicas() {
 🔹 MANGA: https://manga-cupcake-pg.com/?id=672769741
 🔹 MK: https://wwww.slotsmk.bet/?id=567149395
 🔹 OKOK: https://www.okokcoco.win/?id=366139391
+🔹 TY: https://tyfalcon.com?a=678842351
 
 ⚠️ *Atenção:* ⚠️
 Sempre invista com cautela e responsabilidade.  
