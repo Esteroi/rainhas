@@ -7,8 +7,7 @@ function mensagemPlataformas() {
 ✅ **MANGA CUPCAKE**
 🔗 https://manga-Cupcake-pg.com/?id=672769741
 
-✅ **CLUBE 777 ASIA**
-🔗 https://777asian.cc/?id=181355692
+
 
 ✅ **COROA JJZZ**
 🔗 https://www.jjzzjogo.com/?id=741444131
