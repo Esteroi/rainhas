@@ -20,6 +20,7 @@ const frases = [
   "⌛ Pare de esperar por um momento perfeito, ele não existe. Faça o momento ser perfeito!",
   "💎 Não é sobre ser fácil, é sobre valer a pena.",
   "🦁 Seja mais forte que suas desculpas.",
+  "🌈 Mesmo a noite mais escura termina com o nascer do sol. Continue, a sua luz já está vindo.",
   "🌍 Você não é o que aconteceu com você, você é o que escolhe se tornar.",
   "🎲 Quem não arrisca, já está perdendo sem perceber.",
   "📆 Cada dia que você não age é um dia que você não viveu.",
