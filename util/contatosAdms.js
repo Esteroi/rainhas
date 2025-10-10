@@ -1,7 +1,7 @@
 const contatosAdms = {
   ester: {
     nome: "Ester",
-    whatsapp: "+55 14 99148-6070",
+    whatsapp: "+55 14 99195-2627",
   },
   kely: {
     nome: "Kely",
