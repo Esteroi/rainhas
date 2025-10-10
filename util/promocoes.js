@@ -17,6 +17,8 @@ function mensagemPromocoes() {
 
 🔗 https://www.okokcoco.win/?id=366139391
 
+🔗 https://tyfalcon.com?a=678842351
+
 
 *POUCAS VAGAS*
 
