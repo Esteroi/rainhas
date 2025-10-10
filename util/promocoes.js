@@ -13,8 +13,6 @@ function mensagemPromocoes() {
 
 🔗 https://www.jjzzjogo.com/?id=741444131
 
-🔗 https://wwww.slotsmk.bet/?id=567149395
-
 🔗 https://www.okokcoco.win/?id=366139391
 
 🔗 https://tyfalcon.com?a=678842351
