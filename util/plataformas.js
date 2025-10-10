@@ -27,7 +27,6 @@ Sempre invista com cautela e responsabilidade.
 function mensagemPlataformasParaDicas() {
   return `
 💡 *Plataformas indicadas para aplicar esta dica:*  
-🔹 CLUBE 777: https://777asian.cc/?id=181355692
 🔹 COROA: https://www.jjzzjogo.com/?id=741444131
 🔹 MANGA: https://manga-cupcake-pg.com/?id=672769741
 🔹 MK: https://wwww.slotsmk.bet/?id=567149395
