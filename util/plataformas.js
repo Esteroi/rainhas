@@ -13,6 +13,8 @@ function mensagemPlataformas() {
 ✅ **TY FALCON*
 🔗https://tyfalcon.com?a=678842351
 
+✅ **MANGA CRONO*
+🔗https://mango-Crono-PG.com/?id=157450561
 ⚠️ *Atenção:* ⚠️
 Sempre invista com cautela e responsabilidade.  
 🍀 Boa sorte!
@@ -25,7 +27,7 @@ function mensagemPlataformasParaDicas() {
 🔹 COROA: https://www.jjzzjogo.com/?id=741444131
 🔹 OKOK: https://www.okokcoco.win/?id=366139391
 🔹 TY: https://tyfalcon.com?a=678842351
-
+🔹 MANGA: https://mango-Crono-PG.com/?id=157450561
 ⚠️ *Atenção:* ⚠️
 Sempre invista com cautela e responsabilidade.  
 🍀 Boa sorte!
