@@ -11,8 +11,11 @@ function mensagemPromocoes() {
 
 *DEVOLVO 5 NO PIX_*
 
+🔗 https://www.jjzzjogo.com/?id=741444131
 
-🔹MANGA: https://manga-cupcake-pg/?id=672769741
+🔗 https://wwww.slotsmk.bet/?id=567149395
+
+🔗 https://www.okokcoco.win/?id=366139391
 
 
 *POUCAS VAGAS*
