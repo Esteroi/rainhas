@@ -8,7 +8,7 @@ Aqui nós temos:
 * ⁠Lista de horários e links de porcentagem
 * ⁠Posts de ganhos
 *O QUE ESPERAMOS DE VOCE?*
-* MUITA PARTICIPAÇÃO E INTERAÇÃO*
+*MUITA PARTICIPAÇÃO E INTERAÇÃO*
 
 
 Qualquer coisa estamos à disposição!
