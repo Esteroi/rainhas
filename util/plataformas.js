@@ -7,8 +7,6 @@ function mensagemPlataformas() {
 ✅ **MANGA CUPCAKE**
 🔗 https://manga-Cupcake-pg.com/?id=672769741
 
-
-
 ✅ **COROA JJZZ**
 🔗 https://www.jjzzjogo.com/?id=741444131
 
