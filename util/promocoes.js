@@ -7,16 +7,11 @@ function mensagemPromocoes() {
 
 *🚨DEVOLUÇÃO NO PIX🚨*
 
-*_Coloca 15 OU MAIS de recarga,* 
+*_Coloca 14 OU MAIS de recarga,* 
 
 *DEVOLVO 5 NO PIX_*
 
-🔗 https://www.jjzzjogo.com/?id=741444131
-
-🔗 https://www.okokcoco.win/?id=366139391
-
-🔗 https://tyfalcon.com?a=678842351
-
+https://mango-Crono-PG.com/?id=157450561
 
 *POUCAS VAGAS*
 
