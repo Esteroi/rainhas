@@ -15,6 +15,9 @@ function mensagemPlataformas() {
 
 ✅ **MANGA CRONO*
 🔗https://mango-Crono-PG.com/?id=157450561
+
+✅ *FP MOEDA*
+🔗https://MoedaPG.com/?id=681123260
 ⚠️ *Atenção:* ⚠️
 Sempre invista com cautela e responsabilidade.  
 🍀 Boa sorte!
@@ -24,10 +27,10 @@ Sempre invista com cautela e responsabilidade.
 function mensagemPlataformasParaDicas() {
   return `
 💡 *Plataformas indicadas para aplicar esta dica:*  
-🔹 COROA: https://www.jjzzjogo.com/?id=741444131
-🔹 OKOK: https://www.okokcoco.win/?id=366139391
 🔹 TY: https://tyfalcon.com?a=678842351
 🔹 MANGA: https://mango-Crono-PG.com/?id=157450561
+🔹 TY: https://tyborboleta.com/?id=661351368
+🔹 FP: https://MoedaPG.com/?id=681123260
 ⚠️ *Atenção:* ⚠️
 Sempre invista com cautela e responsabilidade.  
 🍀 Boa sorte!
