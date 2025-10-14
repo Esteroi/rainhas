@@ -7,11 +7,11 @@ function mensagemPromocoes() {
 
 *🚨DEVOLUÇÃO NO PIX🚨*
 
-*_Coloca 14 OU MAIS de recarga,* 
+*_Coloca 15 OU MAIS de recarga,* 
 
 *DEVOLVO 5 NO PIX_*
 
-https://mango-Crono-PG.com/?id=157450561
+https://MoedaPG.com/?id=681123260
 
 *POUCAS VAGAS*
 
