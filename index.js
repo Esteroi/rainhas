@@ -471,9 +471,17 @@ async function iniciar() {
 
 const client = new Client({
   authStrategy: new LocalAuth(),
-  puppeteer: {
-    executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
-  }
+ puppeteer: {
+  headless: true,
+  args: [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-dev-shm-usage',
+    '--disable-extensions',
+    '--disable-gpu',
+    '--disable-software-rasterizer'
+  ]
+}
 });
 
   client.on("qr", (qr) => {
