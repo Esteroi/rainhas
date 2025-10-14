@@ -7,11 +7,17 @@ function mensagemPromocoes() {
 
 *🚨DEVOLUÇÃO NO PIX🚨*
 
-*_Coloca 15 OU MAIS de recarga,* 
+*_Coloca 15 OU MAIS de recarga,_* 
+*_DEVOLVO 5 NO PIX_*
 
-*DEVOLVO 5 NO PIX_*
+ouuuuu
+
+*_Coloca 50 OU MAIS de recarga,_* 
+*_DEVOLVO 10 NO PIX_*
 
 https://MoedaPG.com/?id=681123260
+
+https://tyborboleta.com/?id=661351368
 
 *POUCAS VAGAS*
 
