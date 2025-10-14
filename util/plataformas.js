@@ -16,6 +16,9 @@ function mensagemPlataformas() {
 ✅ *CLUBE 777 DOT*
 🔗https://www.777dot.win/?id=821445494
 
+✅ *888 HORA*
+🔗https://888hora.co/?id=452204320
+
 ⚠️ *Atenção:* ⚠️
 Sempre invista com cautela e responsabilidade.  
 🍀 Boa sorte!
@@ -29,6 +32,7 @@ function mensagemPlataformasParaDicas() {
 🔹 TY: https://tyborboleta.com/?id=661351368
 🔹 FP: https://MoedaPG.com/?id=681123260
 🔹 FCLUBE 777: https://www.777dot.win/?id=821445494
+🔹 888: https://888hora.co/?id=452204320 
 
 ⚠️ *Atenção:* ⚠️
 Sempre invista com cautela e responsabilidade.  
