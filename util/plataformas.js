@@ -13,11 +13,14 @@ function mensagemPlataformas() {
 ✅ *FP MOEDA*
 🔗https://MoedaPG.com/?id=681123260
 
-✅ *CLUBE 777 DOT*
+✅ **CLUBE 777 DOT*
 🔗https://www.777dot.win/?id=821445494
 
-✅ *888 HORA*
+✅ **888 HORA*
 🔗https://888hora.co/?id=452204320
+
+✅ **MANGA CAFE8
+🔗https://manga-cafe-pg.com/?id=782240348
 
 ⚠️ *Atenção:* ⚠️
 Sempre invista com cautela e responsabilidade.  
@@ -33,6 +36,7 @@ function mensagemPlataformasParaDicas() {
 🔹 FP: https://MoedaPG.com/?id=681123260
 🔹 FCLUBE 777: https://www.777dot.win/?id=821445494
 🔹 888: https://888hora.co/?id=452204320 
+🔹 MANGA: https://manga-cafe-pg.com/?id=782240348
 
 ⚠️ *Atenção:* ⚠️
 Sempre invista com cautela e responsabilidade.  
