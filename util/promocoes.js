@@ -15,10 +15,7 @@ ouuuuu
 *_Coloca 50 OU MAIS de recarga,_* 
 *_DEVOLVO 10 NO PIX_*
 
-https://coroa2025vip.com/?id=952933421
-
-https://tyborboleta.com/?id=661351368
-
+https://manga-cafe-pg.com/?id=782240348
 
 *POUCAS VAGAS*
 
