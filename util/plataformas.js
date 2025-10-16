@@ -4,23 +4,17 @@ function mensagemPlataformas() {
 
 🎯 *PLATAFORMAS INDICADAS* 🎯
 
-✅ **TY BORBOLETA*
-🔗https://tyborboleta.com/?id=661351368
-
 ✅ **COROA 2025*
 🔗https://coroa2025vip.com/?id=952933421
 
-✅ *FP MOEDA*
-🔗https://MoedaPG.com/?id=681123260
-
-✅ **CLUBE 777 DOT*
-🔗https://www.777dot.win/?id=821445494
-
-✅ **888 HORA*
-🔗https://888hora.co/?id=452204320
-
-✅ **MANGA CAFE8
+✅ **MANGA CAFE*
 🔗https://manga-cafe-pg.com/?id=782240348
+
+✅ **MK FRIES*
+🔗https://friesmk.bet/?id=803599005
+
+✅ **TY CAMALEAO*
+🔗https://camaleaoty.com?a=827591933
 
 ⚠️ *Atenção:* ⚠️
 Sempre invista com cautela e responsabilidade.  
@@ -32,11 +26,9 @@ function mensagemPlataformasParaDicas() {
   return `
 💡 *Plataformas indicadas para aplicar esta dica:*  
 🔹 COROA: https://coroa2025vip.com/?id=952933421
-🔹 TY: https://tyborboleta.com/?id=661351368
-🔹 FP: https://MoedaPG.com/?id=681123260
-🔹 FCLUBE 777: https://www.777dot.win/?id=821445494
-🔹 888: https://888hora.co/?id=452204320 
+🔹 TY: https://camaleaoty.com?a=827591933
 🔹 MANGA: https://manga-cafe-pg.com/?id=782240348
+🔹 MK: https://friesmk.bet/?id=803599005
 
 ⚠️ *Atenção:* ⚠️
 Sempre invista com cautela e responsabilidade.  
