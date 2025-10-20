@@ -4,8 +4,6 @@ function mensagemPlataformas() {
 
 🎯 *PLATAFORMAS INDICADAS* 🎯
 
-✅ **MK FRIES*
-🔗https://friesmk.bet/?id=803599005
 
 ✅ **BBQ 777*
 🔗https://bbq777.vip/?id=760730175
@@ -28,7 +26,6 @@ Sempre invista com cautela e responsabilidade.
 function mensagemPlataformasParaDicas() {
   return `
 💡 *Plataformas indicadas para aplicar esta dica:*  
-🔹 MK: https://friesmk.bet/?id=803599005
 🔹 BBQ: https://bbq777.vip/?id=760730175
 🔹 FP: https://3olhospg.com/?id=811837780
 🔹 999: https://999kitty.bet/?id=347692110
