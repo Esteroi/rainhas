@@ -345,6 +345,25 @@ if (chat.isGroup && message.body && message.body.match(/https?:\/\/\S+/i)) {
     return;
   }
 
+    if (corpo.startsWith("!sorteio")) {
+    const partes = message.body.trim().split(" ");
+    if (partes.length < 4) {
+      await chat.sendMessage("⚠️ Use o formato: !sorteio Nome Número Plataforma\nEx: !sorteio Ester 2627 manga");
+      return;
+    }
+
+    const nome = partes[1];
+    const numero = partes[2];
+    const plataforma = partes.slice(3).join(" ");
+
+    let participantes = await carregarParticipantes();
+    participantes.push({ nome, numero, plataforma });
+
+    await salvarParticipantes(participantes);
+    await chat.sendMessage(`✅ Participante *${nome}* (${numero} - ${plataforma}) adicionado com sucesso ao sorteio! 🍀`);
+    return;
+  }
+
   switch (corpo) {
     case "!links":
       await chat.sendMessage(linksPorcentagem);
