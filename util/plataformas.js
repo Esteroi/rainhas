@@ -8,9 +8,6 @@ function mensagemPlataformas() {
 ✅ **BBQ 777*
 🔗https://bbq777.vip/?id=760730175
 
-✅ **FP OLHOS*
-🔗https://3olhospg.com/?id=811837780
-
 ✅ **999 KITTY*
 🔗https://999kitty.bet/?id=347692110
 
