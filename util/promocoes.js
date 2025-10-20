@@ -4,7 +4,6 @@ function mensagemPromocoes() {
 
 🔔 * PROMOÇÕES SURPRESA!* 🔔
 
-
 *🚨DEVOLUÇÃO NO PIX🚨*
 
 *_Coloca 15 OU MAIS de recarga,_* 
@@ -15,7 +14,12 @@ ouuuuu
 *_Coloca 50 OU MAIS de recarga,_* 
 *_DEVOLVO 10 NO PIX_*
 
-https://manga-cafe-pg.com/?id=782240348
+https://bbq777.vip/?id=760730175
+
+https://3olhospg.com/?id=811837780
+
+https://kfdraven.bet?a=397042490
+
 
 *POUCAS VAGAS*
 
