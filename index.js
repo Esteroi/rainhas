@@ -265,7 +265,7 @@ async function tratarMensagem(client, message) {
     for (const userId of mencionados) {
       const contato = await client.getContactById(userId);
       await chat.sendMessage(
-        `🎉 Parabéns, @${contato.id.user}! Procure a adm Ester ou a adm Kely para pegar sua banca! Lembrando: quem jogou nas nossas plataformas hoje ganha 15, esta semana 10.`,
+        `🎉 Parabéns, @${contato.id.user}! Procure a adm Ester ou a adm Kely para pegar sua banca!`,
         { mentions: [contato] }
       );
     }
