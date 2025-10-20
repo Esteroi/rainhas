@@ -14,6 +14,9 @@ function mensagemPlataformas() {
 ✅ **KF DRAVEN*
 🔗https://kfdraven.bet?a=397042490
 
+✅ **CLUBE 777 SKY*
+🔗https://777ski.com/?id=811690644
+
 ⚠️ *Atenção:* ⚠️
 Sempre invista com cautela e responsabilidade.  
 🍀 Boa sorte!
@@ -24,7 +27,7 @@ function mensagemPlataformasParaDicas() {
   return `
 💡 *Plataformas indicadas para aplicar esta dica:*  
 🔹 BBQ: https://bbq777.vip/?id=760730175
-🔹 FP: https://3olhospg.com/?id=811837780
+🔹 CLUBE 777: https://777ski.com/?id=811690644
 🔹 999: https://999kitty.bet/?id=347692110
 🔹 KF: https://kfdraven.bet?a=397042490
 
