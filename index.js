@@ -487,21 +487,20 @@ if (chat.isGroup && message.body && message.body.match(/https?:\/\/\S+/i)) {
 async function iniciar() {
   await carregarDadosJogos();
 
-
-const client = new Client({
-  authStrategy: new LocalAuth(),
- puppeteer: {
-  headless: true,
-  args: [
-    '--no-sandbox',
-    '--disable-setuid-sandbox',
-    '--disable-dev-shm-usage',
-    '--disable-extensions',
-    '--disable-gpu',
-    '--disable-software-rasterizer'
-  ]
-}
-});
+  const client = new Client({
+    authStrategy: new LocalAuth(),
+    puppeteer: {
+      headless: true,
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-extensions',
+        '--disable-gpu',
+        '--disable-software-rasterizer'
+      ]
+    }
+  });
 
   client.on("qr", (qr) => {
     qrcode.generate(qr, { small: true });
@@ -512,17 +511,44 @@ const client = new Client({
     console.log("✅ Cliente está pronto!");
     iniciarVerificacaoAutomatica(client);
     iniciarEnvioAutomaticoDicas(client);
+
+    // 📢 Envio automático de mensagem de SORTEIO a cada 30 minutos (somente das 8h às 22h)
+    const mensagemSorteio = `
+🎁 *SORTEIO IMPERDÍVEL!* 🎁
+
+Quer participar? Recarregue acima de *20 reais* em uma das plataformas abaixo e coloque seu nome no sorteio.  
+🍀 *Boa sorte!* 🍀
+
+${mensagemPlataformas()}
+`;
+
+    setInterval(async () => {
+      const agora = new Date();
+      const hora = agora.getHours();
+
+      if (hora >= 8 && hora <= 22) {
+        try {
+          const chat = await client.getChatById(GRUPO_ALVO_ID);
+          await chat.sendMessage(mensagemSorteio);
+          console.log(`📨 Mensagem automática de sorteio enviada às ${hora}h`);
+        } catch (err) {
+          console.error("❌ Erro ao enviar mensagem automática de sorteio:", err);
+        }
+      } else {
+        console.log(`⏸ Fora do horário de envio (${hora}h)`);
+      }
+    }, 1800000);
   });
 
   client.on("message", async (message) => {
     try {
       await tratarMensagem(client, message);
     } catch (err) {
-      console.error("Erro no tratamento da mensagem:", err);
+      console.error("❌ Erro no tratamento da mensagem:", err);
     }
   });
 
- // 📌 AQUI entra o evento de boas-vindas
+  // 📌 Evento de boas-vindas
   client.on('group_join', async (notification) => {
     try {
       const chat = await notification.getChat();
@@ -542,4 +568,3 @@ const client = new Client({
 }
 
 iniciar();
-
