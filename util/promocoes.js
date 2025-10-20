@@ -16,8 +16,6 @@ ouuuuu
 
 https://bbq777.vip/?id=760730175
 
-https://3olhospg.com/?id=811837780
-
 https://kfdraven.bet?a=397042490
 
 
