@@ -515,30 +515,31 @@ async function iniciar() {
 });
 
     // 📢 Envio automático de mensagem de SORTEIO a cada 30 minutos (somente das 8h às 22h)
-    const mensagemSorteio = `
+function iniciarEnvioSorteio(client) {
+  const mensagemSorteio = `
 🎁 *SORTEIO IMPERDÍVEL!* 🎁
 
 Quer participar? Recarregue acima de *20 reais* em uma das plataformas abaixo e coloque seu nome no sorteio.  
 🍀 *Boa sorte!* 🍀
 
 ${mensagemPlataformas()}
-`;
+  `;
 
-    setInterval(async () => {
-     
-      if (hora >= 8 && hora <= 22) {
-        try {
-          const chat = await client.getChatById(GRUPO_ALVO_ID);
-          await chat.sendMessage(mensagemSorteio);
-          console.log(`📨 Mensagem automática de sorteio enviada às ${hora}h`);
-        } catch (err) {
-          console.error("❌ Erro ao enviar mensagem automática de sorteio:", err);
-        }
-      } else {
-        console.log(`⏸ Fora do horário de envio (${hora}h)`);
+  setInterval(async () => {
+    const agora = new Date();
+    const hora = agora.getHours();
+
+    if (hora >= 8 && hora <= 22) {
+      try {
+        const chat = await client.getChatById(GRUPO_ALVO_ID);
+        await chat.sendMessage(mensagemSorteio);
+        console.log("📨 Mensagem automática de sorteio enviada.");
+      } catch (err) {
+        console.error("❌ Erro ao enviar mensagem automática de sorteio:", err);
       }
-    }, 1800000);
-  });
+    }
+  }, 30 * 60 * 1000); // a cada 30 minutos
+}
 
   client.on("message", async (message) => {
     try {
