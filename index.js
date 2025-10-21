@@ -511,6 +511,8 @@ async function iniciar() {
     console.log("✅ Cliente está pronto!");
     iniciarVerificacaoAutomatica(client);
     iniciarEnvioAutomaticoDicas(client);
+      iniciarEnvioSorteio(client); // <- nova função
+});
 
     // 📢 Envio automático de mensagem de SORTEIO a cada 30 minutos (somente das 8h às 22h)
     const mensagemSorteio = `
@@ -523,9 +525,7 @@ ${mensagemPlataformas()}
 `;
 
     setInterval(async () => {
-      const agora = new Date();
-      const hora = agora.getHours();
-
+     
       if (hora >= 8 && hora <= 22) {
         try {
           const chat = await client.getChatById(GRUPO_ALVO_ID);
