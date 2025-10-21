@@ -18,6 +18,8 @@ https://bbq777.vip/?id=760730175
 
 https://kfdraven.bet?a=397042490
 
+https://999kitty.bet/?id=347692110
+
 
 *POUCAS VAGAS*
 
@@ -29,7 +31,8 @@ https://kfdraven.bet?a=397042490
 
 *vagas LIMITADAS
 🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦
-*_As promoções são um complemento para aumentar as chances e aproveitar melhor a experiência._*     
+*_Promoções são um complemento para aumentar as chances_* 
+*_e aproveitar melhor a experiência._*     
 🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦🧦
 `;
 }
