@@ -517,11 +517,13 @@ async function iniciar() {
     // 📢 Envio automático de mensagem de SORTEIO a cada 30 minutos (somente das 8h às 22h)
 function iniciarEnvioSorteio(client) {
   const mensagemSorteio = `
-🎉 SORTEIO IMPERDÍVEL – RAINHAS DA SORTE! 🎉
+*🎉 SORTEIO IMPERDÍVEL – RAINHAS DA SORTE! 🎉*
 
 💎 Como participar:
 1️⃣ Recarregue acima de R$20 em qualquer plataforma indicada abaixo.
 2️⃣ Coloque seu nome no sorteio.
+exemplo:
+!sorteio Ester 2627 manga
 🍀 Quanto mais participar, mais chances de ganhar!
 
 ${mensagemPlataformas()}
