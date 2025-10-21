@@ -5,31 +5,32 @@ function mensagemPlataformas() {
 🎯 *PLATAFORMAS INDICADAS* 🎯
 
 
-✅ **BBQ 777*
+💖 **BBQ 777*
 🔗https://bbq777.vip/?id=760730175
 
-✅ **999 KITTY*
+💖 **999 KITTY*
 🔗https://999kitty.bet/?id=347692110
 
-✅ **KF DRAVEN*
+💖 **KF DRAVEN*
 🔗https://kfdraven.bet?a=397042490
 
-✅**COROA 2OP*
+💖**COROA 2OP*
 🔗https://www.2opg.net/?id=889918974
 
-✅ **CLUBE 777 SKY*
+💖 **CLUBE 777 SKY*
 🔗https://777ski.com/?id=811690644
 
-✅**M1 CCC*
+💖**M1 CCC*
 🔗https://m1-CCC.bet/?id=336507100
 
-✅**TY OCELOT*
+💖**TY OCELOT*
 🔗https://tyocelot.com?a=779626341
 
 
-⚠️ *Atenção:* ⚠️
-Sempre invista com cautela e responsabilidade.  
-🍀 Boa sorte!
+⚠️ Atenção:
+Invista sempre com cautela e responsabilidade.
+
+🍀 Boa sorte! 🍀
 `;
 }
 
@@ -44,9 +45,10 @@ function mensagemPlataformasParaDicas() {
 🔹 TY: https://tyocelot.com?a=779626341
 🔹 COROA: https://www.2opg.net/?id=889918974
 
-⚠️ *Atenção:* ⚠️
-Sempre invista com cautela e responsabilidade.  
-🍀 Boa sorte!
+⚠️ Atenção:
+Invista sempre com cautela e responsabilidade.
+
+🍀 Boa sorte! 🍀
 `;
 }
 
