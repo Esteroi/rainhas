@@ -11,9 +11,6 @@ function mensagemPlataformas() {
 💖 **999 KITTY*
 🔗https://999kitty.bet/?id=347692110
 
-💖 **KF DRAVEN*
-🔗https://kfdraven.bet?a=397042490
-
 💖**COROA 2OP*
 🔗https://www.2opg.net/?id=889918974
 
@@ -40,7 +37,6 @@ function mensagemPlataformasParaDicas() {
 🔹 BBQ: https://bbq777.vip/?id=760730175
 🔹 CLUBE 777: https://777ski.com/?id=811690644
 🔹 999: https://999kitty.bet/?id=347692110
-🔹 KF: https://kfdraven.bet?a=397042490
 🔹 M1: https://m1-CCC.bet/?id=336507100
 🔹 TY: https://tyocelot.com?a=779626341
 🔹 COROA: https://www.2opg.net/?id=889918974
