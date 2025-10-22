@@ -525,6 +525,9 @@ function iniciarEnvioSorteio(client) {
 exemplo:
 !sorteio Ester 2627 manga
 🍀 Quanto mais participar, mais chances de ganhar!
+📋 Para saber se está no sorteio:
+Digite:
+!participantes 
 
 ${mensagemPlataformas()}
   `;
