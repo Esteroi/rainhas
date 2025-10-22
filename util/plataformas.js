@@ -23,6 +23,12 @@ function mensagemPlataformas() {
 💖**TY OCELOT*
 🔗https://tyocelot.com?a=779626341
 
+💖**KF 55555*
+🔗https://kfs5555.com?a=448462147
+
+💖**MANGA MAGICO*
+🔗https://manga-magico-pg.com/?id=642054731
+
 
 ⚠️ Atenção:
 Invista sempre com cautela e responsabilidade.
@@ -40,6 +46,8 @@ function mensagemPlataformasParaDicas() {
 🔹 M1: https://m1-CCC.bet/?id=336507100
 🔹 TY: https://tyocelot.com?a=779626341
 🔹 COROA: https://www.2opg.net/?id=889918974
+🔹 KF: https://kfs5555.com?a=448462147
+🔹 MANGA: https://manga-magico-pg.com/?id=642054731
 
 ⚠️ Atenção:
 Invista sempre com cautela e responsabilidade.
