@@ -14,8 +14,6 @@ ouuuuu
 *_Coloca 50 OU MAIS de recarga,_* 
 *_DEVOLVO 10 NO PIX_*
 
-https://bbq777.vip/?id=760730175
-
 https://999kitty.bet/?id=347692110
 
 https://tyocelot.com?a=779626341
