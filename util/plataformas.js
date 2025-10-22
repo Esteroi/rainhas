@@ -5,9 +5,6 @@ function mensagemPlataformas() {
 🎯 *PLATAFORMAS INDICADAS* 🎯
 
 
-💖 **BBQ 777*
-🔗https://bbq777.vip/?id=760730175
-
 💖 **999 KITTY*
 🔗https://999kitty.bet/?id=347692110
 
@@ -40,7 +37,6 @@ Invista sempre com cautela e responsabilidade.
 function mensagemPlataformasParaDicas() {
   return `
 💡 *Plataformas indicadas para aplicar esta dica:*  
-🔹 BBQ: https://bbq777.vip/?id=760730175
 🔹 CLUBE 777: https://777ski.com/?id=811690644
 🔹 999: https://999kitty.bet/?id=347692110
 🔹 M1: https://m1-CCC.bet/?id=336507100
