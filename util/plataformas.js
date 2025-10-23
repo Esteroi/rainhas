@@ -26,6 +26,9 @@ function mensagemPlataformas() {
 💖**MANGA MAGICO*
 🔗https://manga-magico-pg.com/?id=642054731
 
+💖**OKOK SAT*
+🔗https://okoksat5.com/?id=323578938
+
 
 ⚠️ Atenção:
 Invista sempre com cautela e responsabilidade.
@@ -44,6 +47,7 @@ function mensagemPlataformasParaDicas() {
 🔹 COROA: https://www.2opg.net/?id=889918974
 🔹 KF: https://kfs5555.com?a=448462147
 🔹 MANGA: https://manga-magico-pg.com/?id=642054731
+🔹 OKOK: https://okoksat5.com/?id=323578938
 
 ⚠️ Atenção:
 Invista sempre com cautela e responsabilidade.
