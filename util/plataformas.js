@@ -11,8 +11,8 @@ function mensagemPlataformas() {
 💖**COROA 2OP*
 🔗https://www.2opg.net/?id=889918974
 
-💖 **CLUBE 777 SKY*
-🔗https://777ski.com/?id=811690644
+💖 **MMM JOGO*
+🔗https://mmmjogou.com/?id=118846206
 
 💖**M1 CCC*
 🔗https://m1-CCC.bet/?id=336507100
@@ -40,7 +40,7 @@ Invista sempre com cautela e responsabilidade.
 function mensagemPlataformasParaDicas() {
   return `
 💡 *Plataformas indicadas para aplicar esta dica:*  
-🔹 CLUBE 777: https://777ski.com/?id=811690644
+🔹 MMM: https://mmmjogou.com/?id=118846206
 🔹 999: https://999kitty.bet/?id=347692110
 🔹 M1: https://m1-CCC.bet/?id=336507100
 🔹 TY: https://tyocelot.com?a=779626341
