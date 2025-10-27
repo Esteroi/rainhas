@@ -298,24 +298,31 @@ if (chat.isGroup && message.body && message.body.match(/https?:\/\/\S+/i) && !me
     let autorId = message.author || message.from;
     if (autorId.includes('@lid')) autorId = autorId.replace('@lid', '@c.us');
 
-    // Atualiza lista de participantes do grupo
+    // Atualiza lista de participantes
     await chat.fetchParticipants();
-    const participante = chat.participants.find(p => p.id._serialized === autorId);
 
+    // Lista de admins
+    const adminIds = chat.participants
+      .filter(p => p.isAdmin)
+      .map(p => p.id._serialized);
+
+    // Se for admin, permite o link e não apaga
+    if (adminIds.includes(autorId)) {
+      console.log(`🔑 Link enviado por admin (${autorId}) - permitido.`);
+      return;
+    }
+
+    // Verifica se participante existe no grupo
+    const participante = chat.participants.find(p => p.id._serialized === autorId);
     if (!participante) {
       console.log(`⚠️ Autor do link (${autorId}) não encontrado no grupo.`);
       return;
     }
 
-    // SE for admin, apenas registra no console e NÃO remove
-    if (participante.isAdmin) {
-      console.log(`🔑 Link enviado por admin (${autorId}) - permitido.`);
-      return; // <--- para aqui, não remove
-    }
-
-    // Se não for admin, apaga e remove do grupo
+    // Remove a mensagem e expulsa participante
     await message.delete(true);
     await chat.removeParticipants([autorId]);
+
     console.log(`🚫 Link enviado por não admin (${autorId}) - removido.`);
     await chat.sendMessage(`❌ Link não autorizado! Membro ${autorId} removido.`);
   } catch (err) {
