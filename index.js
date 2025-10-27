@@ -550,15 +550,18 @@ ${mensagemPlataformas()}
     const hora = agora.getHours();
 
     if (hora >= 8 && hora <= 22) {
-      try {
-        const chat = await client.getChatById(GRUPO_ALVO_ID);
-        await chat.sendMessage(mensagemSorteio);
-        console.log("📨 Mensagem automática de sorteio enviada.");
-      } catch (err) {
-        console.error("❌ Erro ao enviar mensagem automática de sorteio:", err);
-      }
+        try {
+            for (const grupoId of GRUPOS_ALVO_IDS) {
+                const chat = await client.getChatById(grupoId);
+                await chat.sendMessage(mensagemSorteio);
+                console.log(`📨 Mensagem automática de sorteio enviada para ${grupoId}.`);
+            }
+        } catch (err) {
+            console.error("❌ Erro ao enviar mensagem automática de sorteio:", err);
+        }
     }
-  }, 30 * 60 * 1000); // a cada 30 minutos
+}, 30 * 60 * 1000); // a cada 30 minutos
+
 }
 
   client.on("message", async (message) => {
