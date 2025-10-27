@@ -500,6 +500,7 @@ if (chat.isGroup && message.body && message.body.match(/https?:\/\/\S+/i)) {
 
 // -------------------- INICIALIZAÇÃO DO CLIENTE --------------------
 
+
 async function iniciar() {
   await carregarDadosJogos();
 
@@ -527,12 +528,12 @@ async function iniciar() {
     console.log("✅ Cliente está pronto!");
     iniciarVerificacaoAutomatica(client);
     iniciarEnvioAutomaticoDicas(client);
-      iniciarEnvioSorteio(client); // <- nova função
-});
+    iniciarEnvioSorteio(client); // <- nova função
+  });
 
-    // 📢 Envio automático de mensagem de SORTEIO a cada 30 minutos (somente das 8h às 22h)
-function iniciarEnvioSorteio(client) {
-  const mensagemSorteio = `
+  // 📢 Envio automático de mensagem de SORTEIO a cada 30 minutos (somente das 8h às 22h)
+  function iniciarEnvioSorteio(client) {
+    const mensagemSorteio = `
 *🎉 SORTEIO IMPERDÍVEL – RAINHAS DA SORTE! 🎉*
 
 💎 Como participar:
@@ -546,29 +547,28 @@ Digite:
 !participantes 
 
 ${mensagemPlataformas()}
-  `;
+    `;
 
-  let ultimaHoraSorteio = null;
+    let ultimaHoraSorteio = null;
 
-  setInterval(async () => {
-    const agora = new Date();
-    const hora = agora.getHours();
+    setInterval(async () => {
+      const agora = new Date();
+      const hora = agora.getHours();
 
-    if (hora >= 8 && hora <= 22 && hora !== ultimaHoraSorteio) {
-      try {
-        for (const grupoId of GRUPOS_ALVO_IDS) {
-          const chat = await client.getChatById(grupoId);
-          await chat.sendMessage(mensagemSorteio);
-          console.log(`📨 Mensagem automática de sorteio enviada para ${grupoId}.`);
+      if (hora >= 8 && hora <= 22 && hora !== ultimaHoraSorteio) {
+        try {
+          for (const grupoId of GRUPOS_ALVO_IDS) {
+            const chat = await client.getChatById(grupoId);
+            await chat.sendMessage(mensagemSorteio);
+            console.log(`📨 Mensagem automática de sorteio enviada para ${grupoId}.`);
+          }
+          ultimaHoraSorteio = hora;
+        } catch (err) {
+          console.error("❌ Erro ao enviar mensagem automática de sorteio:", err);
         }
-        ultimaHoraSorteio = hora;
-      } catch (err) {
-        console.error("❌ Erro ao enviar mensagem automática de sorteio:", err);
       }
-    }
-  }, 60 * 1000);
-}
-}
+    }, 60 * 1000);
+  }
 
   client.on("message", async (message) => {
     try {
@@ -586,7 +586,6 @@ ${mensagemPlataformas()}
       const nomeUsuario = contact.pushname || contact.number || "novo membro";
 
       const mensagem = mensagemBoasVindas(nomeUsuario, chat.name);
-
       await chat.sendMessage(mensagem, { mentions: [contact] });
       console.log(`👑 Mensagem de boas-vindas enviada para ${nomeUsuario}`);
     } catch (err) {
@@ -597,4 +596,5 @@ ${mensagemPlataformas()}
   await client.initialize();
 }
 
+// 🔹 Chama a função principal
 iniciar();
