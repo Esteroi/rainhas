@@ -298,33 +298,42 @@ if (chat.isGroup && message.body && message.body.match(/https?:\/\/\S+/i) && !me
     let autorId = message.author || message.from;
     if (autorId.includes('@lid')) autorId = autorId.replace('@lid', '@c.us');
 
-    // Atualiza lista de participantes
-    await chat.fetchParticipants();
+    // Pega chat atualizado
+    const groupChat = await client.getChatById(chat.id);
+    await groupChat.fetch();
+
+    const participantes = groupChat.participants;
 
     // Lista de admins
-    const adminIds = chat.participants
+    const adminIds = participantes
       .filter(p => p.isAdmin)
       .map(p => p.id._serialized);
 
-    // Se for admin, permite o link e não apaga
+    // Se for admin, permite o link
     if (adminIds.includes(autorId)) {
       console.log(`🔑 Link enviado por admin (${autorId}) - permitido.`);
       return;
     }
 
     // Verifica se participante existe no grupo
-    const participante = chat.participants.find(p => p.id._serialized === autorId);
+    const participante = participantes.find(p => p.id._serialized === autorId);
     if (!participante) {
       console.log(`⚠️ Autor do link (${autorId}) não encontrado no grupo.`);
       return;
     }
 
-    // Remove a mensagem e expulsa participante
+    // Nunca remove admins
+    if (participante.isAdmin) {
+      console.log(`🔒 Não é permitido remover admin (${autorId}).`);
+      return;
+    }
+
+    // Remove mensagem e expulsa participante
     await message.delete(true);
-    await chat.removeParticipants([autorId]);
+    await groupChat.removeParticipants([autorId]);
 
     console.log(`🚫 Link enviado por não admin (${autorId}) - removido.`);
-    await chat.sendMessage(`❌ Link não autorizado! Membro ${autorId} removido.`);
+    await groupChat.sendMessage(`❌ Link não autorizado! Membro ${autorId} removido.`);
   } catch (err) {
     console.error("Erro ao processar link enviado por não admin:", err);
     await chat.sendMessage("⚠️ Não foi possível processar o link ou remover o membro. Verifique se o bot é admin.");
