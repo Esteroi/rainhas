@@ -80,37 +80,7 @@ let candidatoAcao = null;
 
 // Inicializa monitoramento de participantes
 iniciarWatchParticipantes();
-✅ Essa é a primeira parte pronta.
-Ela organiza todos os require e variáveis globais, sem nenhum SyntaxError.
 
-Se quiser, já podemos passar para a PARTE 2 – funções auxiliares (carregar dados, participantes, salvar, enviar horários, etc.).
-
-Quer que eu continue para a Parte 2?
-
-
-
-
-
-
-
-Você disse:
-ok
-
-
-
-O ChatGPT disse:
-Perfeito! Vamos para a PARTE 2 – FUNÇÕES AUXILIARES, que incluem:
-
-carregar e salvar participantes
-
-carregar dados dos jogos
-
-enviar horários de jogos
-
-Vou organizar de forma limpa e sem erros de sintaxe:
-
-js
-Copiar código
 // -------------------- FUNÇÕES AUXILIARES --------------------
 
 // Carrega dados dos jogos do arquivo JSON
