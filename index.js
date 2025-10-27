@@ -590,11 +590,9 @@ ${mensagemPlataformas()}
       console.log(`👑 Mensagem de boas-vindas enviada para ${nomeUsuario}`);
     } catch (err) {
       console.error("❌ Erro ao enviar mensagem de boas-vindas:", err);
-    }
+      }
   });
 
   await client.initialize();
 }
-
-// 🔹 Chama a função principal
 iniciar();
