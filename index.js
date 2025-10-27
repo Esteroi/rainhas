@@ -295,11 +295,10 @@ async function tratarMensagem(client, message) {
 // -------------------- VERIFICAÇÃO DE LINKS --------------------
 if (chat.isGroup && message.body && message.body.match(/https?:\/\/\S+/i) && !message.fromMe) {
   try {
-    // identifica autor
     let autorId = message.author || message.from;
     if (autorId.includes('@lid')) autorId = autorId.replace('@lid', '@c.us');
 
-    // atualiza participantes do grupo antes de verificar
+    // Atualiza lista de participantes do grupo
     await chat.fetchParticipants();
     const participante = chat.participants.find(p => p.id._serialized === autorId);
 
@@ -308,13 +307,13 @@ if (chat.isGroup && message.body && message.body.match(/https?:\/\/\S+/i) && !me
       return;
     }
 
-    // verifica se é admin
+    // SE for admin, apenas registra no console e NÃO remove
     if (participante.isAdmin) {
       console.log(`🔑 Link enviado por admin (${autorId}) - permitido.`);
-      return;
+      return; // <--- para aqui, não remove
     }
 
-    // remove mensagem e participante
+    // Se não for admin, apaga e remove do grupo
     await message.delete(true);
     await chat.removeParticipants([autorId]);
     console.log(`🚫 Link enviado por não admin (${autorId}) - removido.`);
