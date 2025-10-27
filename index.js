@@ -291,30 +291,16 @@ async function tratarMensagem(client, message) {
     return;
   }
 
-  //-------------------- VERIFICAÇÃO DE LINKS --------------------
 
 // -------------------- VERIFICAÇÃO DE LINKS --------------------
 if (chat.isGroup && message.body && message.body.match(/https?:\/\/\S+/i) && !message.fromMe) {
   try {
-    // Identifica o autor corretamente
+    // identifica autor
     let autorId = message.author || message.from;
+    if (autorId.includes('@lid')) autorId = autorId.replace('@lid', '@c.us');
 
-    // Normaliza IDs @lid -> @c.us
-    if (autorId.includes('@lid')) {
-      autorId = autorId.replace('@lid', '@c.us');
-    }
-
-    const adminIds = chat.participants
-      .filter(p => p.isAdmin)
-      .map(p => p.id._serialized);
-
-    // Se for admin, deixa passar
-    if (adminIds.includes(autorId)) {
-      console.log(`🔑 Link enviado por admin (${autorId}) - permitido.`);
-      return;
-    }
-
-    // Procura o participante no grupo
+    // atualiza participantes do grupo antes de verificar
+    await chat.fetchParticipants();
     const participante = chat.participants.find(p => p.id._serialized === autorId);
 
     if (!participante) {
@@ -322,12 +308,17 @@ if (chat.isGroup && message.body && message.body.match(/https?:\/\/\S+/i) && !me
       return;
     }
 
-    // Deleta a mensagem e remove o participante
+    // verifica se é admin
+    if (participante.isAdmin) {
+      console.log(`🔑 Link enviado por admin (${autorId}) - permitido.`);
+      return;
+    }
+
+    // remove mensagem e participante
     await message.delete(true);
     await chat.removeParticipants([autorId]);
-
     console.log(`🚫 Link enviado por não admin (${autorId}) - removido.`);
-    await chat.sendMessage(`❌ Link não autorizado! Membro ${participante.id.user} removido.`);
+    await chat.sendMessage(`❌ Link não autorizado! Membro ${autorId} removido.`);
   } catch (err) {
     console.error("Erro ao processar link enviado por não admin:", err);
     await chat.sendMessage("⚠️ Não foi possível processar o link ou remover o membro. Verifique se o bot é admin.");
