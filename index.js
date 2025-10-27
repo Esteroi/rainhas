@@ -535,7 +535,7 @@ function iniciarEnvioSorteio(client) {
 💎 Como participar:
 1️⃣ Recarregue acima de R$20 em qualquer plataforma indicada abaixo.
 2️⃣ Coloque seu nome no sorteio.
-exemplo:
+Exemplo:
 !sorteio Ester 2627 manga
 🍀 Quanto mais participar, mais chances de ganhar!
 📋 Para saber se está no sorteio:
@@ -544,9 +544,6 @@ Digite:
 
 ${mensagemPlataformas()}
   `;
-
-function iniciarEnvioSorteio(client) {
-  const mensagemSorteio = `...`; // sua mensagem
 
   let ultimaHoraSorteio = null;
 
@@ -567,6 +564,7 @@ function iniciarEnvioSorteio(client) {
       }
     }
   }, 60 * 1000);
+}
 }
 
   client.on("message", async (message) => {
