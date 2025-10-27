@@ -545,23 +545,27 @@ Digite:
 ${mensagemPlataformas()}
   `;
 
-  setInterval(async () => {
+let ultimaHoraSorteio = null;
+
+setInterval(async () => {
     const agora = new Date();
     const hora = agora.getHours();
+    const minuto = agora.getMinutes();
 
-    if (hora >= 8 && hora <= 22) {
+    // Só envia se for entre 8h e 22h e ainda não enviou neste horário
+    if (hora >= 8 && hora <= 22 && (ultimaHoraSorteio !== hora)) {
         try {
             for (const grupoId of GRUPOS_ALVO_IDS) {
                 const chat = await client.getChatById(grupoId);
                 await chat.sendMessage(mensagemSorteio);
                 console.log(`📨 Mensagem automática de sorteio enviada para ${grupoId}.`);
             }
+            ultimaHoraSorteio = hora; // marca que já enviou
         } catch (err) {
             console.error("❌ Erro ao enviar mensagem automática de sorteio:", err);
         }
     }
-}, 30 * 60 * 1000); // a cada 30 minutos
-
+}, 60 * 1000); // verifica a cada minuto
 }
 
   client.on("message", async (message) => {
