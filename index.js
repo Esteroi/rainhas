@@ -39,49 +39,6 @@ let candidatoAcao = null;
 iniciarWatchParticipantes();
 
 // -------------------- FUNÇÕES AUXILIARES --------------------
-const { Client, LocalAuth, MessageMedia } = require("whatsapp-web.js");
-const qrcode = require("qrcode-terminal");
-const fs = require("fs");
-const fsp = fs.promises;
-const path = require("path");
-
-// Utilitários do bot
-const { pegarAleatoria } = require('./util/motivacional');
-const mensagemBoasVindas = require('./util/bemvindos');
-const { gerarMensagemContatos } = require('./util/contatosAdms');
-const piadas = require("./util/piada");
-const versiculos = require("./util/versiculos");
-const { enviarAjuda } = require("./util/ajuda");
-const { obterDicaAleatoria } = require('./util/dicas');
-const formatarMinutosPagantes = require('./util/minutosPagantes');
-const { brincadeiras, respostas } = require('./util/brincadeiras');
-const { gerarSorteUnica } = require('./util/sorte');
-const linksPorcentagem = require("./util/porcentagem");
-const obterSaudacao = require("./util/saudacoes");
-const mensagemPromocoes = require("./util/promocoes");
-const { iniciarWatchParticipantes } = require("./watchParticipantes");
-const { mensagemPlataformas, mensagemPlataformasParaDicas } = require('./util/plataformas');
-
-// -------------------- VARIÁVEIS GLOBAIS --------------------
-const GRUPOS_ALVO_IDS = [
-    "120363417960334632@g.us", // Rainhas da Sorte
-    "120363404426717999@g.us"  // Rainhas GRUPO
-];
-
-const arquivoLista = path.join(__dirname, 'desafiolista.txt');
-const PARTICIPANTES_PATH = path.join(__dirname, "participantes.json");
-const participantesFormatadosPath = path.join(__dirname, "participantes_formatados.txt");
-const dadosJogosPath = path.join(__dirname, "dados_jogos.json");
-
-let dadosJogos = {};
-let perguntaAtual = null;
-let respondida = true;
-let candidatoAcao = null;
-
-// Inicializa monitoramento de participantes
-iniciarWatchParticipantes();
-
-// -------------------- FUNÇÕES AUXILIARES --------------------
 
 // Carrega dados dos jogos do arquivo JSON
 async function carregarDadosJogos() {
