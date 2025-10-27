@@ -1,3 +1,4 @@
+
 const { Client, LocalAuth, MessageMedia } = require("whatsapp-web.js");
 const qrcode = require("qrcode-terminal");
 const fs = require("fs");
@@ -20,7 +21,9 @@ const mensagemPromocoes = require("./util/promocoes");
 const { iniciarWatchParticipantes } = require("./watchParticipantes");
 const { mensagemPlataformas, mensagemPlataformasParaDicas } = require('./util/plataformas');
 
-const GRUPO_ALVO_ID = "120363417960334632@g.us";
+const GRUPOS_ALVO_IDS = [
+    "120363417960334632@g.us", // Rainhas da Sorte
+    "120363404426717999@g.us"  // Rainhas GRUPO
 
 const arquivoLista = path.join(__dirname, 'desafiolista.txt');
 const PARTICIPANTES_PATH = path.join(__dirname, "participantes.json");
@@ -99,8 +102,15 @@ function iniciarVerificacaoAutomatica(client) {
 
     if (horaAtual >= 7 && horaAtual <= 22 && agora.getMinutes() === 30 && horaAtual !== ultimaHoraEnviadaPlataformas) {
       try {
-        const chat = await client.getChatById(GRUPO_ALVO_ID);
+       for (const grupoId of GRUPOS_ALVO_IDS) {
+    try {
+        const chat = await client.getChatById(grupoId);
         await chat.sendMessage(mensagemPlataformas());
+        console.log(`📢 Mensagem automática de plataformas enviada para ${grupoId}`);
+    } catch (err) {
+        console.error(`❌ Erro ao enviar mensagem para ${grupoId}:`, err);
+    }
+}
         console.log(`📢 Mensagem automática de plataformas enviada às ${horaAtual}:30`);
         ultimaHoraEnviadaPlataformas = horaAtual;
       } catch (err) {
@@ -147,17 +157,19 @@ function iniciarEnvioAutomaticoDicas(client) {
     const minutos = agora.getMinutes();
 
     if (minutos % 40 === 0 && minutos !== ultimoMinutoEnviado && agora.getHours() >= 7 && agora.getHours() <= 22) {
-      try {
-        const chat = await client.getChatById(GRUPO_ALVO_ID);
-        const textoFixo = "👑 *Dica da RAINHA DA SORTE* 👑\nAnote e use com sabedoria:";
-        const mensagemCompleta = `${textoFixo}\n\n${obterDicaAleatoria()}\n\n${mensagemPlataformasParaDicas()}`;
-        await chat.sendMessage(mensagemCompleta);
-        console.log(`📢 Mensagem automática de dicas enviada às ${agora.toTimeString().slice(0,5)}`);
+    try {
+        for (const grupoId of GRUPOS_ALVO_IDS) {
+            const chat = await client.getChatById(grupoId);
+            const textoFixo = "👑 *Dica da RAINHA DA SORTE* 👑\nAnote e use com sabedoria:";
+            const mensagemCompleta = `${textoFixo}\n\n${obterDicaAleatoria()}\n\n${mensagemPlataformasParaDicas()}`;
+            await chat.sendMessage(mensagemCompleta);
+            console.log(`📢 Mensagem automática de dicas enviada para ${grupoId} às ${agora.toTimeString().slice(0,5)}`);
+        }
         ultimoMinutoEnviado = minutos;
-      } catch (err) {
+    } catch (err) {
         console.error("Erro ao enviar mensagem automática de dicas:", err);
-      }
     }
+}
   }, 60 * 1000);
 }
 
