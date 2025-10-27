@@ -24,6 +24,7 @@ const { mensagemPlataformas, mensagemPlataformasParaDicas } = require('./util/pl
 const GRUPOS_ALVO_IDS = [
     "120363417960334632@g.us", // Rainhas da Sorte
     "120363404426717999@g.us"  // Rainhas GRUPO
+];
 
 const arquivoLista = path.join(__dirname, 'desafiolista.txt');
 const PARTICIPANTES_PATH = path.join(__dirname, "participantes.json");
