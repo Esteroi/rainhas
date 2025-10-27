@@ -293,44 +293,46 @@ async function tratarMensagem(client, message) {
 
   //-------------------- VERIFICAÇÃO DE LINKS --------------------
 
-if (chat.isGroup && message.body && message.body.match(/https?:\/\/\S+/i)) {
-  if (message.fromMe) return;
+// -------------------- VERIFICAÇÃO DE LINKS --------------------
+if (chat.isGroup && message.body && message.body.match(/https?:\/\/\S+/i) && !message.fromMe) {
+  try {
+    // Identifica o autor corretamente
+    let autorId = message.author || message.from;
 
-  let autor = message.author || message.from;
-
-  // Normaliza IDs @lid -> @c.us
-  if (autor.includes('@lid')) {
-    autor = autor.replace('@lid', '@c.us');
-  }
-
-  const adminIds = chat.participants
-    .filter(p => p.isAdmin)
-    .map(p => p.id._serialized);
-
-  if (!adminIds.includes(autor)) {
-    try {
-      const participante = chat.participants.find(p => p.id._serialized === autor);
-
-      if (!participante) {
-        console.log(`⚠️ Usuário ${autor} não está na lista de participantes. Não foi possível expulsar.`);
-        return;
-      }
-
-      await message.delete(true);
-      await chat.removeParticipants([autor]);
-
-      console.log(`🚫 Link enviado por não admin (${autor}) - removido.`);
-      await chat.sendMessage('❌ Link não autorizado! Membro removido.');
-    } catch (err) {
-      console.error("Erro ao remover membro:", err);
-      await chat.sendMessage("⚠️ Não foi possível remover o membro. O bot precisa ser admin.");
+    // Normaliza IDs @lid -> @c.us
+    if (autorId.includes('@lid')) {
+      autorId = autorId.replace('@lid', '@c.us');
     }
-  } else {
-    console.log(`🔑 Link enviado por admin (${autor}) - permitido.`);
-  }
-  return;
-}
 
+    const adminIds = chat.participants
+      .filter(p => p.isAdmin)
+      .map(p => p.id._serialized);
+
+    // Se for admin, deixa passar
+    if (adminIds.includes(autorId)) {
+      console.log(`🔑 Link enviado por admin (${autorId}) - permitido.`);
+      return;
+    }
+
+    // Procura o participante no grupo
+    const participante = chat.participants.find(p => p.id._serialized === autorId);
+
+    if (!participante) {
+      console.log(`⚠️ Autor do link (${autorId}) não encontrado no grupo.`);
+      return;
+    }
+
+    // Deleta a mensagem e remove o participante
+    await message.delete(true);
+    await chat.removeParticipants([autorId]);
+
+    console.log(`🚫 Link enviado por não admin (${autorId}) - removido.`);
+    await chat.sendMessage(`❌ Link não autorizado! Membro ${participante.id.user} removido.`);
+  } catch (err) {
+    console.error("Erro ao processar link enviado por não admin:", err);
+    await chat.sendMessage("⚠️ Não foi possível processar o link ou remover o membro. Verifique se o bot é admin.");
+  }
+}
 // -------------------- OUTROS COMANDOS --------------------
   if (corpo === "!dica") {
     const textoFixo = "👑 *Dica da RAINHA DA SORTE* 👑\nAnote e use com sabedoria:";
