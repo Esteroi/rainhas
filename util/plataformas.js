@@ -8,7 +8,7 @@ function mensagemPlataformas() {
 💖 **999 FLASH*
 🔗https://999flsh.com/?id=730088821
 
-💖 **OK PERFUME77*
+💖 **FG PERFUME77*
 🔗https://ok.perfume777.vip/?id=178260846
 
 💖 **MMM JOGO*
@@ -41,7 +41,7 @@ function mensagemPlataformasParaDicas() {
 🔹 *TY:* https://picapauty.com?a=442232142
 🔹 *KF:* https://eehh.bet?a=708848988
 🔹 *MANGA:* https://mango-falcao-pg.com/?id=590881600
-🔹 *OKOK:* https://ok.perfume777.vip/?id=178260846
+🔹 *FG:* https://ok.perfume777.vip/?id=178260846
 🔹 *OKOK:* https://okoksat5.com/?id=323578938
 
 ⚠️ Atenção:
