@@ -5,29 +5,24 @@ function mensagemPlataformas() {
 🎯 *PLATAFORMAS INDICADAS* 🎯
 
 
-💖 **999 KITTY*
-🔗https://999kitty.bet/?id=347692110
+💖 **999 FLASH*
+🔗https://999flsh.com/?id=730088821
 
-💖**COROA 2OP*
-🔗https://www.2opg.net/?id=889918974
+💖 **OK PERFUME77*
+🔗https://ok.perfume777.vip/?id=178260846
 
 💖 **MMM JOGO*
 🔗https://mmmjogou.com/?id=118846206
 
-💖**M1 CCC*
-🔗https://m1-CCC.bet/?id=336507100
+💖 **KF-EEHHBET* 
+🔗https://eehh.bet?a=708848988
 
-💖**TY OCELOT*
-🔗https://tyocelot.com?a=779626341
+💖 **MANGA FALCÃO*
+🔗https://mango-falcao-pg.com/?id=590881600
 
-💖**KF 55555*
-🔗https://kfs5555.com?a=448462147
+💖 **TYPICAPAU*
+🔗 https://picapauty.com?a=442232142
 
-💖**MANGA MAGICO*
-🔗https://manga-magico-pg.com/?id=642054731
-
-💖**OKOK SAT*
-🔗https://okoksat5.com/?id=323578938
 
 
 ⚠️ Atenção:
@@ -40,14 +35,12 @@ Invista sempre com cautela e responsabilidade.
 function mensagemPlataformasParaDicas() {
   return `
 💡 *Plataformas indicadas para aplicar esta dica:*  
-🔹 MMM: https://mmmjogou.com/?id=118846206
-🔹 999: https://999kitty.bet/?id=347692110
-🔹 M1: https://m1-CCC.bet/?id=336507100
-🔹 TY: https://tyocelot.com?a=779626341
-🔹 COROA: https://www.2opg.net/?id=889918974
-🔹 KF: https://kfs5555.com?a=448462147
-🔹 MANGA: https://manga-magico-pg.com/?id=642054731
-🔹 OKOK: https://okoksat5.com/?id=323578938
+🔹 *MMM:*https://mmmjogou.com/?id=118846206
+🔹 *999:*https://999flsh.com/?id=730088821
+🔹 *TY:*https://picapauty.com?a=442232142
+🔹 *KF:*https://eehh.bet?a=708848988
+🔹 *MANGA:*https://mango-falcao-pg.com/?id=590881600
+🔹 *OKOK:*https://ok.perfume777.vip/?id=178260846
 
 ⚠️ Atenção:
 Invista sempre com cautela e responsabilidade.
