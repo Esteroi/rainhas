@@ -14,9 +14,6 @@ function mensagemPlataformas() {
 💖 **MMM JOGO*
 🔗https://mmmjogou.com/?id=118846206
 
-💖 **EEESE PG* 
-🔗https://www.eeesepg.net/?id=262551156
-
 💖 **COROA IIGG*
 🔗https://www.iiggbet.bet/?id=612043388
 
@@ -39,7 +36,6 @@ function mensagemPlataformasParaDicas() {
 🔹 *MMM:* https://mmmjogou.com/?id=118846206
 🔹 *999:* https://999flsh.com/?id=730088821
 🔹 *TY:* https://picapauty.com?a=442232142
-🔹 *PG:* https://www.eeesepg.net/?id=262551156
 🔹 *COROA:* https://www.iiggbet.bet/?id=612043388
 🔹 *FG:* https://ok.perfume777.vip/?id=178260846
 🔹 *OKOK:* https://okoksat5.com/?id=323578938
