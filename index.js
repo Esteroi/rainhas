@@ -293,52 +293,44 @@ async function tratarMensagem(client, message) {
 
 
 // -------------------- VERIFICAÇÃO DE LINKS --------------------
-if (chat.isGroup && message.body && message.body.match(/https?:\/\/\S+/i) && !message.fromMe) {
+if (chat.isGroup && message.body && /https?:\/\/\S+/i.test(message.body) && !message.fromMe) {
   try {
     let autorId = message.author || message.from;
     if (autorId.includes('@lid')) autorId = autorId.replace('@lid', '@c.us');
 
-    // Pega chat atualizado
     const groupChat = await client.getChatById(chat.id);
-    await groupChat.fetch();
-
     const participantes = groupChat.participants;
 
-    // Lista de admins
-    const adminIds = participantes
-      .filter(p => p.isAdmin)
-      .map(p => p.id._serialized);
-
-    // Se for admin, permite o link
-    if (adminIds.includes(autorId)) {
-      console.log(`🔑 Link enviado por admin (${autorId}) - permitido.`);
-      return;
-    }
-
-    // Verifica se participante existe no grupo
+    // Procura o participante
     const participante = participantes.find(p => p.id._serialized === autorId);
+
+    // ✅ Se for admin, apenas loga e sai silenciosamente
+    if (participante && participante.isAdmin) {
+      console.log(`🔑 (Silencioso) Link enviado por admin ${autorId} — permitido.`);
+      return;
+    }
+
+    // ⚠️ Se não encontrar o participante, não faz nada
     if (!participante) {
-      console.log(`⚠️ Autor do link (${autorId}) não encontrado no grupo.`);
+      console.log(`⚠️ Autor (${autorId}) não encontrado no grupo.`);
       return;
     }
 
-    // Nunca remove admins
-    if (participante.isAdmin) {
-      console.log(`🔒 Não é permitido remover admin (${autorId}).`);
-      return;
-    }
+    // 🚫 Remove mensagem e membro se não for admin
+    await message.delete(true).catch(() => {});
+    await groupChat.removeParticipants([autorId]).catch(() => {});
 
-    // Remove mensagem e expulsa participante
-    await message.delete(true);
-    await groupChat.removeParticipants([autorId]);
+    const contato = await client.getContactById(autorId);
+    const nome = contato.pushname || contato.number;
 
-    console.log(`🚫 Link enviado por não admin (${autorId}) - removido.`);
-    await groupChat.sendMessage(`❌ Link não autorizado! Membro ${autorId} removido.`);
+    console.log(`🚫 ${nome} (${autorId}) removido por envio de link não autorizado.`);
+    await groupChat.sendMessage(`❌ Link não autorizado! ${nome} foi removido do grupo.`);
   } catch (err) {
-    console.error("Erro ao processar link enviado por não admin:", err);
+    console.error("❌ Erro ao processar link enviado por não admin:", err);
     await chat.sendMessage("⚠️ Não foi possível processar o link ou remover o membro. Verifique se o bot é admin.");
   }
 }
+
 // -------------------- OUTROS COMANDOS --------------------
   if (corpo === "!dica") {
     const textoFixo = "👑 *Dica da RAINHA DA SORTE* 👑\nAnote e use com sabedoria:";
