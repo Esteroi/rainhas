@@ -17,8 +17,8 @@ function mensagemPlataformas() {
 💖 **KF-EEHHBET* 
 🔗https://eehh.bet?a=708848988
 
-💖 **MANGA FALCÃO*
-🔗https://mango-falcao-pg.com/?id=590881600
+💖 **COROA IIGG*
+🔗https://www.iiggbet.bet/?id=612043388
 
 💖 **TYPICAPAU*
 🔗 https://picapauty.com?a=442232142
@@ -40,7 +40,7 @@ function mensagemPlataformasParaDicas() {
 🔹 *999:* https://999flsh.com/?id=730088821
 🔹 *TY:* https://picapauty.com?a=442232142
 🔹 *KF:* https://eehh.bet?a=708848988
-🔹 *MANGA:* https://mango-falcao-pg.com/?id=590881600
+🔹 *COROA:* https://www.iiggbet.bet/?id=612043388
 🔹 *FG:* https://ok.perfume777.vip/?id=178260846
 🔹 *OKOK:* https://okoksat5.com/?id=323578938
 
