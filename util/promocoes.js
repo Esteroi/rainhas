@@ -14,9 +14,7 @@ ouuuuu
 *_Coloca 50 OU MAIS de recarga,_* 
 *_DEVOLVO 10 NO PIX_*
 
-https://ok.perfume777.vip/?id=178260846
-
-https://mango-falcao-pg.com/?id=590881600
+https://okoksat5.com/?id=323578938
 
 https://eehh.bet?a=708848988
 
