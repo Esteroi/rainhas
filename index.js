@@ -295,11 +295,24 @@ async function tratarMensagem(client, message) {
 // -------------------- VERIFICAÇÃO DE LINKS --------------------
 if (chat.isGroup && message.body && /https?:\/\/\S+/i.test(message.body) && !message.fromMe) {
   try {
+    // Garante que autorId seja sempre uma string
     let autorId = message.author || message.from;
+    if (typeof autorId !== 'string') {
+      autorId = autorId?._serialized || autorId?.id?._serialized || '';
+    }
+
+    if (!autorId) {
+      console.log("⚠️ autorId indefinido ou inválido:", message.author, message.from);
+      return;
+    }
+
     if (autorId.includes('@lid')) autorId = autorId.replace('@lid', '@c.us');
 
-    const groupChat = await client.getChatById(chat.id);
-    const participantes = groupChat.participants;
+    // Garante que o ID do grupo é uma string válida
+    const groupChatId = typeof chat.id === 'string' ? chat.id : chat.id._serialized;
+    const groupChat = await client.getChatById(groupChatId);
+
+    const participantes = groupChat.participants || [];
 
     // Procura o participante
     const participante = participantes.find(p => p.id._serialized === autorId);
@@ -321,13 +334,12 @@ if (chat.isGroup && message.body && /https?:\/\/\S+/i.test(message.body) && !mes
     await groupChat.removeParticipants([autorId]).catch(() => {});
 
     const contato = await client.getContactById(autorId);
-    const nome = contato.pushname || contato.number;
+    const nome = contato.pushname || contato.number || 'Usuário';
 
     console.log(`🚫 ${nome} (${autorId}) removido por envio de link não autorizado.`);
     await groupChat.sendMessage(`❌ Link não autorizado! ${nome} foi removido do grupo.`);
   } catch (err) {
     console.error("❌ Erro ao processar link enviado por não admin:", err);
-  
   }
 }
 
