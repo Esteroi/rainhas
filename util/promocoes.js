@@ -16,8 +16,7 @@ ouuuuu
 
 https://okoksat5.com/?id=323578938
 
-https://eehh.bet?a=708848988
-
+https://picapauty.com?a=442232142
 
 *POUCAS VAGAS*
 
