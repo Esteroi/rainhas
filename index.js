@@ -327,7 +327,7 @@ if (chat.isGroup && message.body && /https?:\/\/\S+/i.test(message.body) && !mes
     await groupChat.sendMessage(`❌ Link não autorizado! ${nome} foi removido do grupo.`);
   } catch (err) {
     console.error("❌ Erro ao processar link enviado por não admin:", err);
-    await chat.sendMessage("⚠️ Não foi possível processar o link ou remover o membro. Verifique se o bot é admin.");
+  
   }
 }
 
