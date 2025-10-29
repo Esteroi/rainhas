@@ -14,7 +14,6 @@ ouuuuu
 *_Coloca 50 OU MAIS de recarga,_* 
 *_DEVOLVO 10 NO PIX_*
 
-https://okoksat5.com/?id=323578938
 
 https://mmmjogou.com/?id=118846206
 
