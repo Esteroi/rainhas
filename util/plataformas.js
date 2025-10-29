@@ -4,12 +4,14 @@ function mensagemPlataformas() {
 
 🎯 *PLATAFORMAS INDICADAS* 🎯
 
-
 💖 **999 FLASH*
 🔗https://999flsh.com/?id=730088821
 
 💖 **FG PERFUME77*
 🔗https://ok.perfume777.vip/?id=178260846
+
+💖 **KF VVBB*
+🔗https://vvbb.bet?a=254639496
 
 💖 **MMM JOGO*
 🔗https://mmmjogou.com/?id=118846206
@@ -22,6 +24,9 @@ function mensagemPlataformas() {
 
 💖 **OKOK SAT*
 🔗https://okoksat5.com/?id=323578938
+
+💖 **MANGA FANTASMA*
+🔗https://mango-fantasma-pg.com/?id=381734747
 
 ⚠️ Atenção:
 Invista sempre com cautela e responsabilidade.
@@ -39,6 +44,8 @@ function mensagemPlataformasParaDicas() {
 🔹 *COROA:* https://www.iiggbet.bet/?id=612043388
 🔹 *FG:* https://ok.perfume777.vip/?id=178260846
 🔹 *OKOK:* https://okoksat5.com/?id=323578938
+🔹 *KF:* https://vvbb.bet?a=254639496
+🔹 *MANGA:* https://mango-fantasma-pg.com/?id=381734747
 
 ⚠️ Atenção:
 Invista sempre com cautela e responsabilidade.
