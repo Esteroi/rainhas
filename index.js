@@ -608,3 +608,18 @@ ${mensagemPlataformas()}
   await client.initialize();
 }
 iniciar();
+
+// ================== SERVIDOR EXPRESS (necessário para Render) ==================
+const express = require("express");
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.send("✅ Bot WhatsApp está rodando!");
+});
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🌐 Servidor online na porta ${PORT}`);
+});
+
