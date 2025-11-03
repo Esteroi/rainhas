@@ -546,17 +546,25 @@ async function iniciar() {
   // 📢 Envio automático de mensagem de SORTEIO a cada 30 minutos (somente das 8h às 22h)
   function iniciarEnvioSorteio(client) {
     const mensagemSorteio = `
-*🎉 SORTEIO IMPERDÍVEL – RAINHAS DA SORTE! 🎉*
+   🔔 *PROMOÇÕES SURPRESA!* 🔔
+ 
+*Coloca 25 OU MAIS de recarga,* 
+*GANHA OUTRA BANCA DE 10*
 
-💎 Como participar:
-1️⃣ Recarregue acima de R$20 em qualquer plataforma indicada abaixo.
-2️⃣ Coloque seu nome no sorteio.
-Exemplo:
-!sorteio Ester 2627 manga
-🍀 Quanto mais participar, mais chances de ganhar!
-📋 Para saber se está no sorteio:
-Digite:
-!participantes 
+ouuuuu
+
+*Coloca 15 OU MAIS de recarga,*
+*DEVOLVO 5 NO PIX*
+
+https://manga-caveira-pg.com/?id=413974574
+
+https://www.okokhal1.com/?id=776772751
+
+https://tordoty.com?a=222630736
+
+*POUCAS VAGAS*
+
+É isso mesmo!! 💸🔥
 
 ${mensagemPlataformas()}
     `;
