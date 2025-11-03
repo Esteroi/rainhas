@@ -2,20 +2,23 @@ function mensagemPromocoes() {
   return `
 
 
-🔔 * PROMOÇÕES SURPRESA!* 🔔
+🔔 *PROMOÇÕES SURPRESA!* 🔔
 
 *🚨DEVOLUÇÃO NO PIX🚨*
 
-*_Coloca 15 OU MAIS de recarga,_* 
-*_DEVOLVO 5 NO PIX_*
+*Coloca 25 OU MAIS de recarga,* 
+*GANHA OUTRA BANCA DE 10*
 
 ouuuuu
 
-*_Coloca 50 OU MAIS de recarga,_* 
-*_DEVOLVO 10 NO PIX_*
+*Coloca 15 OU MAIS de recarga,*
+*DEVOLVO 5 NO PIX*
 
+https://manga-caveira-pg.com/?id=413974574
 
-https://mmmjogou.com/?id=118846206
+https://www.okokhal1.com/?id=776772751
+
+https://tordoty.com?a=222630736
 
 *POUCAS VAGAS*
 
