@@ -4,29 +4,27 @@ function mensagemPlataformas() {
 
 🎯 *PLATAFORMAS INDICADAS* 🎯
 
-💖 **999 FLASH*
-🔗https://999flsh.com/?id=730088821
+💖 **MK BBB*
+🔗https://mkbbb.com/?id=869727243
 
-💖 **FG PERFUME77*
-🔗https://ok.perfume777.vip/?id=178260846
+💖 **KF BRAND*
+🔗https://brandkf.bet?a=729757809
 
-💖 **KF VVBB*
-🔗https://vvbb.bet?a=254639496
+💖 **OKOK HALL*
+🔗https://www.okokhal1.com/?id=776772751
 
-💖 **MMM JOGO*
-🔗https://mmmjogou.com/?id=118846206
+💖 **RJP VVEE*
+🔗https://vvee.bet?a=484371742
 
-💖 **COROA IIGG*
-🔗https://www.iiggbet.bet/?id=612043388
+💖 **TY TORDO*
+🔗https://tordoty.com?a=222630736
 
-💖 **TYPICAPAU*
-🔗 https://picapauty.com?a=442232142
+💖 **MANGA CAVEIRA*
+🔗https://manga-caveira-pg.com/?id=413974574
 
-💖 **OKOK SAT*
-🔗https://okoksat5.com/?id=323578938
+💖 **ACC BET*
+🔗https://accbet.vip?id=123675029&currency=BRL&type=2
 
-💖 **MANGA FANTASMA*
-🔗https://mango-fantasma-pg.com/?id=381734747
 
 ⚠️ Atenção:
 Invista sempre com cautela e responsabilidade.
@@ -38,14 +36,13 @@ Invista sempre com cautela e responsabilidade.
 function mensagemPlataformasParaDicas() {
   return `
 💡 *Plataformas indicadas para aplicar esta dica:*  
-🔹 *MMM:* https://mmmjogou.com/?id=118846206
-🔹 *999:* https://999flsh.com/?id=730088821
-🔹 *TY:* https://picapauty.com?a=442232142
-🔹 *COROA:* https://www.iiggbet.bet/?id=612043388
-🔹 *FG:* https://ok.perfume777.vip/?id=178260846
-🔹 *OKOK:* https://okoksat5.com/?id=323578938
-🔹 *KF:* https://vvbb.bet?a=254639496
-🔹 *MANGA:* https://mango-fantasma-pg.com/?id=381734747
+🔹 *OKOK:* https://www.okokhal1.com/?id=776772751
+🔹 *RJP:* https://vvee.bet?a=484371742
+🔹 *MK:* https://mkbbb.com/?id=869727243
+🔹 *KF:* https://brandkf.bet?a=729757809
+🔹 *TY:* https://tordoty.com?a=222630736
+🔹 *MANGA:* https://manga-caveira-pg.com/?id=413974574
+🔹 *BET:* https://accbet.vip?id=123675029&currency=BRL&type=2
 
 ⚠️ Atenção:
 Invista sempre com cautela e responsabilidade.
