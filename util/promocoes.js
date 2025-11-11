@@ -14,11 +14,10 @@ ouuuuu
 *Coloca 15 OU MAIS de recarga,*
 *DEVOLVO 5 NO PIX*
 
-https://manga-caveira-pg.com/?id=413974574
 
-https://www.okokhal1.com/?id=776772751
+💖 **MANGA*
+🔗https://www.mango-ritmo-pg.com/?id=548289067
 
-https://tordoty.com?a=222630736
 
 *POUCAS VAGAS*
 
