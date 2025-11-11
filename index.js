@@ -548,23 +548,9 @@ async function iniciar() {
     const mensagemSorteio = `
    🔔 *PROMOÇÕES SURPRESA!* 🔔
  
-*Coloca 25 OU MAIS de recarga,* 
-*GANHA OUTRA BANCA DE 10*
-
-ouuuuu
-
-*Coloca 15 OU MAIS de recarga,*
-*DEVOLVO 5 NO PIX*
-
-https://manga-caveira-pg.com/?id=413974574
-
-https://www.okokhal1.com/?id=776772751
-
-https://tordoty.com?a=222630736
-
-*POUCAS VAGAS*
-
-É isso mesmo!! 💸🔥
+*CHAME ADMS ESTER OU KELY E VEJA EM QUAL PALTAFORMA TEM PROMOÇAO 
+OU ESCREVA *!PROMO* NO GRUPO 
+BOM DIVERTIMENTO
 
 ${mensagemPlataformas()}
     `;
