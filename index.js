@@ -516,20 +516,21 @@ if (chat.isGroup && message.body && /https?:\/\/\S+/i.test(message.body) && !mes
 async function iniciar() {
   await carregarDadosJogos();
 
-  const client = new Client({
-    authStrategy: new LocalAuth(),
-    puppeteer: {
-      headless: true,
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-dev-shm-usage',
-        '--disable-extensions',
-        '--disable-gpu',
-        '--disable-software-rasterizer'
-      ]
-    }
-  });
+const client = new Client({
+  authStrategy: new LocalAuth(),
+  puppeteer: {
+    headless: true,
+    executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--ignore-certificate-errors',
+      '--proxy-server="direct://"',
+      '--proxy-bypass-list=*'
+    ]
+  }
+});
 
   client.on("qr", (qr) => {
     qrcode.generate(qr, { small: true });
