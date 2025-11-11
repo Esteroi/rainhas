@@ -4,26 +4,20 @@ function mensagemPlataformas() {
 
 🎯 *PLATAFORMAS INDICADAS* 🎯
 
-💖 **MK BBB*
-🔗https://mkbbb.com/?id=869727243
+💖 **MANGA*
+🔗https://www.mango-ritmo-pg.com/?id=548289067
 
-💖 **KF BRAND*
-🔗https://brandkf.bet?a=729757809
+💖 **OKOK*
+🔗https://www.okokgym.com/?id=235403617
 
-💖 **OKOK HALL*
-🔗https://www.okokhal1.com/?id=776772751
+💖 **WIN*
+🔗https://ojwincf2.com/?id=220632344
 
-💖 **RJP VVEE*
-🔗https://vvee.bet?a=484371742
+💖 *BET*
+🔗https://5321bet.com?id=610776661&currency=BRL&type=2
 
-💖 **TY TORDO*
-🔗https://tordoty.com?a=222630736
-
-💖 **MANGA CAVEIRA*
-🔗https://manga-caveira-pg.com/?id=413974574
-
-💖 **ACC BET*
-🔗https://accbet.vip?id=123675029&currency=BRL&type=2
+💖 **TY*
+🔗https://tyoriole.com?a=339287020
 
 
 ⚠️ Atenção:
@@ -36,13 +30,11 @@ Invista sempre com cautela e responsabilidade.
 function mensagemPlataformasParaDicas() {
   return `
 💡 *Plataformas indicadas para aplicar esta dica:*  
-🔹 *OKOK:* https://www.okokhal1.com/?id=776772751
-🔹 *RJP:* https://vvee.bet?a=484371742
-🔹 *MK:* https://mkbbb.com/?id=869727243
-🔹 *KF:* https://brandkf.bet?a=729757809
-🔹 *TY:* https://tordoty.com?a=222630736
-🔹 *MANGA:* https://manga-caveira-pg.com/?id=413974574
-🔹 *BET:* https://accbet.vip?id=123675029&currency=BRL&type=2
+🔹 MANGA: https://www.mango-ritmo-pg.com/?id=548289067
+🔹 OKOK:https://www.okokgym.com/?id=235403617
+🔹 WIN: https://ojwincf2.com/?id=220632344
+🔹 BET: https://5321bet.com?id=610776661&currency=BRL&type=2
+🔹 TY: https://tyoriole.com?a=339287020
 
 ⚠️ Atenção:
 Invista sempre com cautela e responsabilidade.
